@@ -29,6 +29,7 @@ with DAG(
         print("체크용 1")
         rslt = ti.xcom_pull(task_ids='tb_cycle_station_info')
         print("체크용 2")
+        print("rslt : \n", rslt)
         import json
         from pprint import pprint
         
