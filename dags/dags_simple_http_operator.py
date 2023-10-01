@@ -6,7 +6,7 @@ from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 import pendulum
 
 with DAG(
-    dag_id='dags_trigger_dag_run_operator',
+    dag_id='dags_simple_http_operator',
     start_date=pendulum.datetime(2023,4,1, tz='Asia/Seoul'),
     schedule='30 9 * * *',
     catchup=False
