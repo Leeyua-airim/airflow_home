@@ -15,7 +15,7 @@ with DAG(
     tb_cycle_station_info = SimpleHttpOperator(
         task_id = 'tb_cycle_station_info',
         http_conn_id='openapi.seoul.go.kr',
-        endpoint='7363724e626272693537526f6f6d6c/json/tbCycleStationUseMonthInfo/1/10/202208',
+        endpoint='{{var.value.apikey_openapi_seoul_go_kr}}/json/tbCycleStationUseMonthInfo/1/10/202208',
         method='GET',
         headers={'Content-Type' : 'application/json',
                  'charset' : 'utf-8',
